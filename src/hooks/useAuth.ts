@@ -14,7 +14,7 @@ export const useAuth = () => {
         await new Promise(resolve => setTimeout(resolve, 250));
 
         // Set this to true for testing
-        const simulateFailure = false;
+        const simulateFailure = true;
         if (simulateFailure) throw new Error("Failed to authenticate");
 
         setIsAuthenticated(true)

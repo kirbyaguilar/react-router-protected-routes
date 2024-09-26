@@ -1,5 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 
+import PrivateRoute from "./components/PrivateRoute";
+
 import Login from "./pages/Login";
 import Protected from "./pages/Protected";
 
@@ -12,7 +14,7 @@ const router = createBrowserRouter([
   // main routes
   {
     path: '/',
-    element: <Protected />
+    element: <PrivateRoute component={Protected} />
   },
 
   // auth routes
